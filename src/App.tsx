@@ -1,4 +1,4 @@
-import { Button } from "@/components/button"
+import { Button } from "@/ui/button"
 import { useState } from 'react'
 import './App.css'
 import reactLogo from './assets/react.svg'
