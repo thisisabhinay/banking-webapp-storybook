@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -30,6 +29,34 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+  }
+
+  @font-face {
+    font-family: "MatterSQ";
+    src: url("./assets/fonts/MatterSQ-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "MatterSQ";
+    src: url("./assets/fonts/MatterSQ-SemiBold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Mont";
+    src: url("./assets/fonts/Mont-Book.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Mont";
+    src: url("./assets/fonts/Mont-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
   }
 
   .dark {
@@ -60,31 +87,31 @@
   }
 
   .type-h1 {
-    @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl
+    @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
   }
-  
+
   .type-h2 {
-    @apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0
+    @apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0;
   }
 
   .type-h3 {
-    @apply scroll-m-20 text-2xl font-semibold tracking-tight
+    @apply scroll-m-20 text-2xl font-semibold tracking-tight;
   }
 
   .type-h4 {
-    @apply scroll-m-20 text-xl font-semibold tracking-tight
+    @apply scroll-m-20 text-xl font-semibold tracking-tight;
   }
 
   .type-p {
-    @apply leading-7 [&:not(:first-child)]:mt-6
+    @apply leading-7 [&:not(:first-child)]:mt-6;
   }
 }
-
 
 @layer base {
   * {
     @apply border-border;
   }
+  
   body {
     @apply bg-background text-foreground;
   }
