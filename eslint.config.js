@@ -1,6 +1,8 @@
 import js from "@eslint/js"
+import jest from "eslint-plugin-jest"
 import reactHooks from "eslint-plugin-react-hooks"
 import reactRefresh from "eslint-plugin-react-refresh"
+import testingLibrary from "eslint-plugin-testing-library"
 import globals from "globals"
 import tseslint from "typescript-eslint"
 
@@ -11,11 +13,16 @@ export default tseslint.config(
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+        ...globals.jest,
+      },
     },
     plugins: {
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
+      "testing-library": testingLibrary,
+      "jest": jest,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
